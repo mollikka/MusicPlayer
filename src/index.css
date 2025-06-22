@@ -1,0 +1,39 @@
+.slider {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #333333;
+  height: 1rem;
+}
+
+.slider::-moz-range-thumb {
+  width: 1ch;
+  height: 1rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 0px;
+}
+
+.slider::-ms-thumb {
+  width: 1ch;
+  height: 1rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 0px;
+}
+
+:root {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: monospace;
+}
+
+.column {
+  background: #232323;
+  margin: 2px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+}
