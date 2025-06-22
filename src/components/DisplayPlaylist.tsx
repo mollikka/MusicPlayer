@@ -17,10 +17,10 @@ export const DisplayPlaylist: React.FC<PlaylistProps> = ({
       <ol>
         {playlist.tracks.map((track, index) => (
           <li key={`${index}`}>
-            <button onClick={() => changeTrack(index)}>
+            <span onClick={() => changeTrack(index)}>
               {currentTrack === track ? ">" : undefined}
               {track.title}
-            </button>
+            </span>
           </li>
         ))}
       </ol>

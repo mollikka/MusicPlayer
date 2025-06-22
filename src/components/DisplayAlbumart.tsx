@@ -8,8 +8,6 @@ export const DisplayAlbumart: React.FC<{
       alt={name}
       style={{
         width: "100%",
-        maxWidth: "40ch",
-        objectFit: "cover",
       }}
     />
   );

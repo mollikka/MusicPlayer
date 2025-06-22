@@ -46,15 +46,11 @@ export const SeekBar: React.FC<SeekBarProps> = ({ audio }: SeekBarProps) => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <span style={{ minWidth: 40, float: "left" }}>
-        {formatTime(currentTime)}
-      </span>
+      <span style={{ float: "left" }}>{formatTime(currentTime)}</span>
 
-      <span style={{ minWidth: 40, float: "none" }}>
-        {formatTime(duration)}
-      </span>
+      <span style={{ float: "none" }}>{formatTime(duration)}</span>
 
-      <span style={{ minWidth: 40, float: "right" }}>{`-${formatTime(
+      <span style={{ float: "right" }}>{`-${formatTime(
         duration - currentTime
       )}`}</span>
 
