@@ -38,7 +38,7 @@ export const SeekBar: React.FC<SeekBarProps> = ({ audio }: SeekBarProps) => {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="seekBar" style={{ textAlign: "center" }}>
       <span style={{ float: "left" }}>{formatTime(currentTime)}</span>
 
       <span style={{ float: "none" }}>{formatTime(duration)}</span>
@@ -48,7 +48,7 @@ export const SeekBar: React.FC<SeekBarProps> = ({ audio }: SeekBarProps) => {
       )}`}</span>
 
       <input
-        className="slider seekBar"
+        className="slider"
         name="seekbar"
         type="range"
         min={0}

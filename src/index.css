@@ -1,19 +1,16 @@
 .slider {
   appearance: none;
   -webkit-appearance: none;
-  height: 1rem;
 }
 
 .slider::-moz-range-thumb {
   width: 1ch;
-  height: 1rem;
   border: none;
   border-radius: 0px;
 }
 
 .slider::-ms-thumb {
   width: 1ch;
-  height: 1rem;
   border: none;
   border-radius: 0px;
 }

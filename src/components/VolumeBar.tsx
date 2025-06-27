@@ -44,7 +44,7 @@ export const VolumeBar: React.FC<VolumeBarProps> = ({ audio }) => {
         Volume:
       </label>
       <input
-        className="slider volumeBar"
+        className="slider"
         name="volume"
         type="range"
         min={0}
