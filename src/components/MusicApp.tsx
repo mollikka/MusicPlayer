@@ -18,7 +18,7 @@ export const MusicApp: React.FC<MusicAppProps> = ({
   });
 
   useEffect(() => {
-    const loadPlaylists = async () => {
+    const loadPlaylist = async () => {
       try {
         const response = await fetch(playlistUrl);
         const data = await response.json();
@@ -27,7 +27,7 @@ export const MusicApp: React.FC<MusicAppProps> = ({
         console.error("Failed to load playlist:", error);
       }
     };
-    loadPlaylists();
+    loadPlaylist();
   }, [playlistUrl]);
 
   return (
