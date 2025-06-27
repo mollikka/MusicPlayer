@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import MusicPlayer from "./MusicPlayer";
 import { Playlist } from "../types";
-import { VolumeBar } from "./VolumeBar";
 
 interface MusicAppProps {
   playlistUrl: string;
@@ -32,7 +31,6 @@ export const MusicApp: React.FC<MusicAppProps> = ({
 
   return (
     <>
-      <VolumeBar audio={audio} />
       <MusicPlayer audio={audio} currentPlaylist={playlist} />
     </>
   );

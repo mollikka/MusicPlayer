@@ -4,6 +4,7 @@ import { DisplaySong } from "./DisplaySong";
 import { DisplayPlaylist } from "./DisplayPlaylist";
 import { PlaybackControls } from "./PlaybackControls";
 import { SeekBar } from "./SeekBar";
+import { VolumeBar } from "./VolumeBar";
 
 interface MusicPlayerProps {
   audio: HTMLAudioElement;
@@ -94,6 +95,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
         currentTrack={currentTrack}
         changeTrack={setTrack}
       />
+      <VolumeBar audio={audio} />
     </>
   );
 };
