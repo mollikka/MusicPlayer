@@ -5,26 +5,6 @@ interface PlaybackControlsProps {
   isPlaying: boolean;
 }
 
-type PlaybackButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-const PlaybackButton: React.FC<PlaybackButtonProps> = ({
-  style = {},
-  ...props
-}) => {
-  const baseStyle: React.CSSProperties = {
-    width: "4ch",
-    textAlign: "center",
-    fontSize: "3rem",
-    ...style,
-  };
-
-  return (
-    <button style={baseStyle} {...props}>
-      {props.children}
-    </button>
-  );
-};
-
 export const PlaybackControls: React.FC<PlaybackControlsProps> = ({
   prevTrack,
   togglePlayPause,
@@ -33,11 +13,15 @@ export const PlaybackControls: React.FC<PlaybackControlsProps> = ({
 }: PlaybackControlsProps) => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <PlaybackButton onClick={prevTrack}>⏮︎</PlaybackButton>
-      <PlaybackButton onClick={togglePlayPause}>
+      <button className="playbackButton" onClick={prevTrack}>
+        ⏮︎
+      </button>
+      <button className="playbackButton" onClick={togglePlayPause}>
         {isPlaying ? "⏸︎" : "⏵︎"}
-      </PlaybackButton>
-      <PlaybackButton onClick={nextTrack}>⏭︎</PlaybackButton>
+      </button>
+      <button className="playbackButton" onClick={nextTrack}>
+        ⏭︎
+      </button>
     </div>
   );
 };

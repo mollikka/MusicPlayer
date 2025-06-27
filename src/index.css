@@ -18,8 +18,11 @@
   border-radius: 0px;
 }
 
-button {
+.playbackButton {
   background-color: transparent;
   border: none;
   color: inherit;
+  width: 4ch;
+  text-align: center;
+  font-size: 3rem;
 }
