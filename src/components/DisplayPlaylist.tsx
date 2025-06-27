@@ -1,3 +1,4 @@
+import { formatTime } from "../format";
 import { Playlist, Track } from "../types";
 
 interface PlaylistProps {
@@ -13,17 +14,31 @@ export const DisplayPlaylist: React.FC<PlaylistProps> = ({
 }: PlaylistProps) => {
   return (
     <>
-      <h3>{playlist.name}</h3>
-      <ol>
+      <h2>Tracks</h2>
+      <table style={{ width: "100%", tableLayout: "auto" }}>
         {playlist.tracks.map((track, index) => (
-          <li key={`${index}`}>
-            <span onClick={() => changeTrack(index)}>
-              {currentTrack === track ? ">" : undefined}
+          <tr
+            key={`${index}`}
+            onClick={() => changeTrack(index)}
+            className={currentTrack === track ? "playingTrack" : ""}
+          >
+            <td>{currentTrack === track ? ">" : " "}</td>
+            <td>{index}</td>
+            <td
+              style={{
+                width: "100%",
+                maxWidth: "1px", // forces the cell to shrink if needed
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
               {track.title}
-            </span>
-          </li>
+            </td>
+            <td>{formatTime(track.length)}</td>
+          </tr>
         ))}
-      </ol>
+      </table>
     </>
   );
 };

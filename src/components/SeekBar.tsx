@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { formatTime } from "../format";
 
 interface SeekBarProps {
   audio: HTMLAudioElement | null;
 }
-
-const formatTime = (time: number): string => {
-  const minutes = Math.floor(time / 60);
-  const seconds = Math.floor(time % 60)
-    .toString()
-    .padStart(2, "0");
-  return `${minutes}:${seconds}`;
-};
 
 export const SeekBar: React.FC<SeekBarProps> = ({ audio }: SeekBarProps) => {
   const [currentTime, setCurrentTime] = useState(0);

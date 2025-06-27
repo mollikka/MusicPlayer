@@ -27,7 +27,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
     () =>
       currentPlaylist.tracks.length > currentTrackIndex
         ? currentPlaylist.tracks[currentTrackIndex]
-        : { src: "", title: "N/A" },
+        : { src: "", title: "N/A", length: 0 },
     [currentPlaylist, currentTrackIndex]
   );
 
