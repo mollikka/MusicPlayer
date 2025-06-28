@@ -3,16 +3,25 @@
   -webkit-appearance: none;
 }
 
+.slider::-webkit-slider-thum {
+  width: 1ch;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
 .slider::-moz-range-thumb {
   width: 1ch;
   border: none;
   border-radius: 0px;
+  cursor: pointer;
 }
 
 .slider::-ms-thumb {
   width: 1ch;
   border: none;
   border-radius: 0px;
+  cursor: pointer;
 }
 
 .playbackButton {
