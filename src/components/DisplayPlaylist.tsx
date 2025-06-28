@@ -23,7 +23,7 @@ export const DisplayPlaylist: React.FC<PlaylistProps> = ({
             className={currentTrack === track ? "playingTrack" : ""}
           >
             <td>{currentTrack === track ? ">" : " "}</td>
-            <td>{index}</td>
+            <td>{index+1}</td>
             <td
               style={{
                 width: "100%",
