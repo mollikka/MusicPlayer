@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { formatTime } from "../format";
+import { formatTime, formatTimeAria } from "../format";
 
 interface SeekBarProps {
   audio: HTMLAudioElement | null;
@@ -57,6 +57,8 @@ export const SeekBar: React.FC<SeekBarProps> = ({ audio }: SeekBarProps) => {
         value={currentTime}
         onChange={handleChange}
         style={{ width: "100%" }}
+        aria-label="Seek playback position"
+        aria-valuetext={`${formatTimeAria(currentTime)} of ${formatTimeAria(duration)}`}
       />
     </div>
   );

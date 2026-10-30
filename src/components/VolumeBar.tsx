@@ -32,7 +32,7 @@ export const VolumeBar: React.FC<VolumeBarProps> = ({ audio }) => {
   return (
     <div className="volumeBar" style={{ display: "flex", width: "100%" }}>
       <label htmlFor="volume" style={{ flexShrink: 0 }}>
-        <span className="emoji">
+        <span className="emoji" aria-hidden="true">
           {volume === 0
             ? "🔇"
             : volume < 0.33
@@ -44,15 +44,17 @@ export const VolumeBar: React.FC<VolumeBarProps> = ({ audio }) => {
         Volume:
       </label>
       <input
+        id="volume"
         className="slider"
         name="volume"
         type="range"
         min={0}
         max={1}
-        step={0.001}
+        step={0.01}
         value={volume}
         onChange={handleChange}
         style={{ flexGrow: 1 }}
+        aria-valuetext={`${Math.round(volume*100)} %`}
       />
     </div>
   );
