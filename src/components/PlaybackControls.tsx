@@ -42,13 +42,13 @@ export const PlaybackControls: React.FC<PlaybackControlsProps> = ({
 }: PlaybackControlsProps) => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <button className="playbackButton" onClick={prevTrack}>
+      <button aria-label="Previous track" className="playbackButton" onClick={prevTrack}>
         <PrevIcon />
       </button>
-      <button className="playbackButton" onClick={togglePlayPause}>
+      <button aria-label={isPlaying ? "Pause" : "Play"} className="playbackButton" onClick={togglePlayPause}>
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
-      <button className="playbackButton" onClick={nextTrack}>
+      <button aria-label="Next track" className="playbackButton" onClick={nextTrack}>
         <NextIcon />
       </button>
     </div>
